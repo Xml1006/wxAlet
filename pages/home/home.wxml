@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+
+<view>
+  <view > home - home - home </view>
+  <view> {{ word }}</view>
+  <view  data-id="{{id}}"> {{flag?"今天学到很多东西":"最近很疲惫,面试题太难记..."  }}</view>
+  <view data-word="{{word}}"> count=== {{count}}</view>
+  <switch bindtap="changeFlag" checked="{{!flag}}"></switch>
+  <view wx:if="{{!flag}}">
+    <image src="{{imgUrl}}" class="h-img"></image>
+    <a href="{{url}}" >  欢迎来到千锋成绩管理系统 </a>
+  </view>
+  <view wx:else> wx:if 的显示隐藏是渲染和不渲染的区别  </view>
+</view>
